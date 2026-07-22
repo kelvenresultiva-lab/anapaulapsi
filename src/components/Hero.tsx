@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { CheckCircle2, Flower2 } from "lucide-react";
+import { Check, Flower2 } from "lucide-react";
 import { hero, heroMobile, whatsappLink } from "@/data/content";
 import Button from "@/components/Button";
 import Reveal from "@/components/Reveal";
@@ -72,8 +72,11 @@ export default function Hero() {
           </Reveal>
 
           <Reveal direction="up" delay={100}>
-            <h1 className="max-w-2xl font-mosseta text-[56px] leading-[1.15] text-ink">
-              {hero.greeting} <span className="text-gold-bright">{hero.name}</span>
+            <h1
+              className="max-w-2xl font-playfair text-[44px] font-normal leading-[1.2] tracking-wide text-ink"
+              style={{ fontVariant: "small-caps" }}
+            >
+              {hero.name}
             </h1>
           </Reveal>
 
@@ -86,12 +89,11 @@ export default function Hero() {
           <Reveal direction="up" delay={300}>
             <ul className="flex flex-col gap-3">
               {hero.checklist.map((item) => (
-                <li key={item} className="flex items-start gap-3">
-                  <CheckCircle2
-                    size={18}
-                    className="mt-0.5 shrink-0 text-gold-bright"
-                  />
-                  <span className="font-heebo text-[15px] font-medium text-ink">
+                <li key={item} className="flex items-center gap-3">
+                  <span className="flex h-5 w-5 shrink-0 items-center justify-center rounded-full bg-[#22c55e]">
+                    <Check size={13} strokeWidth={3} className="text-white" />
+                  </span>
+                  <span className="font-heebo text-base font-medium text-ink">
                     {item}
                   </span>
                 </li>
