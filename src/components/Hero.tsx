@@ -26,7 +26,7 @@ export default function Hero() {
             altura da imagem), o alinhamento se mantém em qualquer tela. */}
         <Reveal
           direction="up"
-          className="relative -mt-[30%] px-6 pb-14 text-center"
+          className="relative -mt-[50%] px-6 pb-14 text-center"
         >
           <p className="font-lato text-[13px] font-semibold uppercase tracking-[2.3px] text-muted">
             {heroMobile.eyebrow}

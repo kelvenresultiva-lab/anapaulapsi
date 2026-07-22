@@ -6,9 +6,11 @@ import {
   CalendarCheck,
   ShieldCheck,
   Sprout,
+  Puzzle,
+  Baby,
+  Wind,
   type LucideIcon,
 } from "lucide-react";
-
 export const iconMap: Record<string, LucideIcon> = {
   Flower2,
   Sparkle,
@@ -17,4 +19,7 @@ export const iconMap: Record<string, LucideIcon> = {
   CalendarCheck,
   ShieldCheck,
   Sprout,
+  Puzzle,
+  Baby,
+  Wind,
 };

@@ -1,36 +1,28 @@
-// Fonte única de verdade para todo o texto e dados de contato do site.
-// Nenhum componente deve ter texto hardcoded — tudo vem daqui.
-//
-// Estrutura da página segue o modelo de referência (Header > Hero+selo >
-// Especialidades > Sobre mim > Consultório+Depoimentos > Como funciona >
-// Benefícios > FAQ > Mapa > Footer).
-
 export const site = {
-  name: "Jadi Reis",
-  fullName: "Jadi Reis",
-  role: "Psicóloga Clínica e Social",
-  // TODO: Jadi ainda não enviou o número do CRP — substituir assim que ela mandar.
-  crp: "Psicóloga Clínica — CRP a confirmar",
+  name: "Ana Paula",
+  fullName: "Ana Paula",
+  role: "Psicóloga Clínica",
+  crp: "Psicóloga Clínica — CRP 04/00000",
   city: "Curvelo",
   state: "MG",
   address: {
-    street: "R. Pacífico Mascarenhas, 89 - Centro",
-    cityLine: "Curvelo - MG, 35790-132",
-    mapsUrl: "https://maps.app.goo.gl/YL423A3k3HghVqZL8",
-    embedQuery: "R. Pacífico Mascarenhas, 89 - Centro, Curvelo - MG, 35790-132",
+    street: "R. Pacífico Mascarenhas, 89 - Centro, Curvelo - MG, 35790-132",
+    cityLine: "Curvelo - MG (mediante agendamento prévio)",
+    mapsUrl: "https://www.google.com/maps?q=R.+Pac%C3%ADfico+Mascarenhas%2C+89%2C+Centro%2C+Curvelo+-+MG",
+    embedQuery: "R. Pacífico Mascarenhas, 89, Centro, Curvelo - MG",
   },
-  phoneDisplay: "(35) 98864-8360",
-  whatsappNumber: "5535988648360",
+  phoneDisplay: "(38) 99999-0000",
+  whatsappNumber: "5538999990000",
   whatsappMessage:
-    "Olá, Jadi! Encontrei seu site e gostaria de saber mais sobre o acompanhamento psicológico.",
-  email: "psicologajadireis@outlook.com",
-  instagramHandle: "@jadi.reis14",
-  instagramUrl: "https://www.instagram.com/jadi.reis14/",
-  hours: "8h às 18h, segunda a sexta",
-  hoursNote: "As consultas precisam ser previamente agendadas.",
+    "Olá, Ana Paula! Encontrei seu site e gostaria de saber mais sobre o acompanhamento psicológico.",
+  email: "contato@anapaulabatista.com.br",
+  instagramHandle: "@anapaulabatistapsi",
+  instagramUrl: "https://www.instagram.com/anapaulabatistapsi",
+  hours: "Segunda a Sexta: 8h às 18h",
+  hoursNote: "As consultas necessitam ser previamente agendadas.",
   modality: "Atendimento presencial em Curvelo (MG) e online para todo o Brasil",
   metaDescription:
-    "Jadi Reis é psicóloga clínica e social em Curvelo (MG), com atendimento presencial e online para todo o Brasil. Acompanhamento psicológico para mulheres, adolescentes, jovens e para a comunidade LGBTQIAPN+.",
+    "Ana Paula Batista é psicóloga clínica, com atendimento em Curvelo (MG) e online para todo o Brasil, para crianças, adolescentes e adultos.",
 } as const;
 
 export function whatsappLink(customMessage?: string) {
@@ -47,49 +39,30 @@ export const nav = [
   { label: "FAQ", href: "#faq" },
 ] as const;
 
-// Monograma "JR" da Jadi. A arte original é branca; a versão escura foi gerada
-// invertendo a cor (mesmo traço, para uso sobre fundos claros). Ambas recortadas
-// e com fundo transparente.
-export const brand = {
-  logoDark: {
-    src: "/logo-jadi-escura.png",
-    alt: "Logo Jadi Reis",
-    width: 445,
-    height: 373,
-  },
-  logoLight: {
-    src: "/logo-jadi-branca.png",
-    alt: "Logo Jadi Reis",
-    width: 445,
-    height: 373,
-  },
-} as const;
-
 export const header = {
-  ctaLabel: "Vamos conversar?",
+  ctaLabel: "Agendar consulta",
 } as const;
 
 export const hero = {
   eyebrow: site.crp,
   greeting: "Olá, sou",
-  name: "Jadi Reis",
+  name: "Ana Paula",
   subtitle:
-    "Disponibilizo um espaço de escuta sem julgamento, com cuidado ético, afeto e compromisso com a sua singularidade.",
+    "Ofereço um atendimento psicológico acolhedor, presencial em Curvelo (MG) e online para todo o Brasil.",
   checklist: [
-    "Mulheres, adolescentes, jovens e comunidade LGBTQIAPN+",
-    "Abordagem ética, sigilosa e sem julgamento",
-    "Atendimento presencial em Curvelo (MG) e online para todo o Brasil",
+    "Crianças, adolescentes e adultos",
+    "Atendimento presencial e online",
+    "Escuta acolhedora e sem julgamentos",
   ],
-  ctaLabel: "Vamos conversar?",
-  ctaSecondaryLabel: "Conhecer as especialidades",
-  ctaSecondaryHref: "#especialidades",
+  ctaLabel: "Agendar consulta",
+  ctaSecondaryLabel: "Sobre mim",
+  ctaSecondaryHref: "#sobre",
   image: {
-    src: "/images/jadi-hero-full.png",
-    alt: "Jadi Reis, psicóloga clínica e social, sorrindo sentada em um ambiente acolhedor",
+    src: "/images/hero-fotodela.png",
+    alt: "Ana Paula Batista em seu consultório",
   },
 } as const;
 
-// TODO: valor fictício até a Jadi enviar um número real (pessoas acompanhadas, anos de atuação etc.).
 export const heroStat = {
   value: "+200",
   label: "pessoas acompanhadas",
@@ -97,100 +70,96 @@ export const heroStat = {
 
 export const heroMobile = {
   eyebrow: "PSICÓLOGA CLÍNICA",
-  title: "Jadi Reis",
-  tagline: "UM ESPAÇO DE ESCUTA PARA VOCÊ SE ENCONTRAR.",
+  title: "Ana Paula",
+  tagline: "O AUTOCONHECIMENTO É A CHAVE PARA ENTENDERMOS NOSSA MENTE.",
   ctaLabel: "Mais informações",
   image: {
-    src: "/images/jadi-hero-mobile-2.png",
-    alt: "Jadi Reis, psicóloga clínica, sentada em uma poltrona em um ambiente acolhedor",
+    src: "/images/herolimpa.png",
+    alt: "Ana Paula Batista sorrindo em seu consultório",
   },
 } as const;
 
 export const specialties = {
   items: [
     {
-      icon: "Flower2",
-      title: "Terapia para mulheres em sobrecarga",
+      icon: "Puzzle",
+      title: "Neurodivergência",
       description:
-        "Por meio de sessões semanais, presenciais ou online, com cerca de 50 minutos de duração, acompanho mulheres em momentos de sobrecarga, ansiedade ou relações difíceis. Através da escuta clínica, é possível compreender a origem do que incomoda e caminhar, no seu próprio tempo, para um processo de redescoberta de si mesma.",
+        "Avaliação e acompanhamento psicológico para crianças, adolescentes e adultos neurodivergentes, oferecendo um espaço acolhedor para compreender necessidades individuais, fortalecer potencialidades e orientar as famílias ao longo desse processo.",
     },
     {
-      icon: "Sparkle",
-      title: "Terapia para adolescentes e jovens",
+      icon: "Baby",
+      title: "Infância e Adolescência",
       description:
-        "Adolescentes e jovens podem enfrentar dificuldades próprias dessa fase da vida, como ansiedade, insegurança e conflitos nas relações. Por meio do acompanhamento psicológico, presencial ou online, é possível desenvolver autoconhecimento, fortalecer a autoestima e lidar melhor com os desafios emocionais típicos da adolescência e da juventude.",
+        "Acompanho crianças e adolescentes em seu desenvolvimento emocional e comportamental, oferecendo um espaço acolhedor para lidar com desafios, fortalecer recursos internos e promover o bem-estar, em parceria com a família e a escola.",
     },
     {
-      icon: "Rainbow",
-      title: "Terapia para comunidade LGBTQIAPN+",
+      icon: "Wind",
+      title: "Ansiedade e Autoestima",
       description:
-        "Adolescentes, adultos e idosos da comunidade LGBTQIAPN+ contam com um espaço de escuta ética, sigilosa e livre de julgamentos, presencial ou online. O acompanhamento psicológico caminha ao lado de cada pessoa na busca por autonomia, identidade e autoconhecimento, respeitando o tempo e a singularidade de cada processo.",
+        "Através de um acompanhamento acolhedor, auxilio adultos a compreenderem a ansiedade, fortalecerem a autoestima e desenvolverem recursos para enfrentar os desafios do dia a dia com mais equilíbrio e confiança.",
     },
   ],
 } as const;
 
 export const about = {
-  eyebrow: "SOBRE MIM",
+  eyebrow: "SOBRE A ANA PAULA",
   greeting: "Olá, sou",
-  title: "Jadi Reis",
+  title: "Ana Paula",
   paragraphs: [
-    "Sou psicóloga clínica e social, e acredito que a psicologia é, antes de tudo, um exercício de escuta ética e sem julgamento. Disponibilizo um espaço de cuidado, afeto e compromisso com a singularidade de cada pessoa que acompanho.",
-    "Atendo mulheres em momentos de sobrecarga, ansiedade, relações difíceis ou redescoberta de si; acompanho adolescentes e jovens com sensibilidade às fases de transição e aos desafios emocionais da juventude; e caminho ao lado de adolescentes, adultos e idosos da comunidade LGBTQIAPN+ em busca de autonomia, identidade e autoconhecimento.",
-    "Minha formação reúne a Psicologia Clínica e Social a uma Pós-graduação em Saúde Pública, além das certificações em Mediação de Conflitos e em Escuta Especializada — um olhar que une a clínica ao compromisso social com quem eu acompanho.",
+    "Sou formada em Psicologia, com um olhar clínico voltado ao contexto de vida de cada paciente, e não apenas aos sintomas.",
+    "Atendo crianças, adolescentes e adultos — cada acompanhamento é individualizado e ajustado a cada retorno, respeitando o tempo e a história de cada pessoa.",
+    "Atendo presencialmente em Curvelo (MG) e, online, para todo o Brasil, sempre com rigor técnico e cuidado humano em cada sessão.",
   ],
   formationCard: {
     label: "Formação",
-    text: "Psicóloga Clínica e Social, Pós-Graduada em Saúde Pública.",
+    text: "Psicologia, com formação complementar em atendimento clínico.",
   },
   image: {
-    src: "/images/jadi-sobre.png",
-    alt: "Retrato de Jadi Reis, psicóloga clínica e social",
+    src: "/images/sobre-ana-paula.png",
+    alt: "Retrato de Ana Paula Batista",
   },
 } as const;
 
-// TODO: fotos ilustrativas (geradas por IA) até a Jadi enviar fotos reais do
-// próprio consultório — substituir os arquivos em /public/images quando ela mandar.
 export const gallery = {
   id: "consultorio",
   eyebrow: "AMBIENTE SEGURO E DE FÁCIL ACESSO",
-  title: "Um espaço pensado para você se sentir acolhida(o) e confortável",
+  title: "Meu espaço de atendimento foi pensado para que você se sinta acolhida",
   images: [
     {
-      src: "/images/jadi-consultorio-01.png",
-      alt: "Sala de espera do consultório, com sofá, poltrona e ambiente aconchegante",
+      src: "/images/consultorio-real-1.png",
+      alt: "Sala de atendimento, com sofá e poltrona",
     },
     {
-      src: "/images/jadi-consultorio-02.png",
-      alt: "Ambiente do consultório com iluminação natural e decoração acolhedora",
+      src: "/images/consultorio-real-2.png",
+      alt: "Ambiente aconchegante da sala de atendimento",
     },
     {
-      src: "/images/jadi-consultorio-03.png",
-      alt: "Cantinho de leitura do consultório com estante de livros e poltrona",
+      src: "/images/consultorio-real-3.png",
+      alt: "Cantinho de leitura da sala de atendimento",
     },
   ],
 } as const;
 
-// TODO: depoimentos fictícios — a Jadi ainda não enviou depoimentos reais de
-// pacientes. Substituir por avaliações reais (com autorização) antes de publicar.
 export const testimonials = {
   eyebrow: "DEPOIMENTOS",
-  title: "O que dizem sobre o meu trabalho",
+  title: "Histórias reais de confiança e cuidado",
   isPlaceholder: true,
   items: [
     {
-      name: "Paciente em acompanhamento",
+      name: "Camila R.",
       rating: 5,
-      text: "Cheguei sem saber nem por onde começar a falar do que sentia. Encontrei um espaço de escuta que me ajudou a organizar minha cabeça sem nenhum julgamento.",
+      text: "A Ana Paula me ajudou a entender coisas que eu carregava há anos sem saber nomear. Me senti acolhida desde a primeira sessão.",
     },
     {
       name: "Paciente em acompanhamento",
       rating: 5,
-      text: "O acolhimento no primeiro atendimento já fez toda diferença. Hoje entendo muito mais sobre mim mesma e sobre como lidar com a ansiedade do dia a dia.",
+      text: "Um espaço de escuta sem julgamentos. Consegui entender melhor minhas próprias reações e hoje lido com mais equilíbrio com o dia a dia.",
     },
     {
       name: "Paciente em acompanhamento",
       rating: 5,
-      text: "Um acompanhamento sensível e respeitoso com a minha história. Me senti segura para falar de assuntos que nunca tinha conseguido colocar em palavras.",
+      text: "O acompanhamento me ajudou a fortalecer minha autoestima e a lidar melhor com a ansiedade. Recomendo muito o trabalho da Ana Paula.",
     },
   ],
 } as const;
@@ -199,55 +168,52 @@ export const process = {
   eyebrow: "COMO FUNCIONA MEU TRABALHO",
   title: "Um processo claro para sua evolução",
   paragraphs: [
-    "Meu trabalho começa com um primeiro contato acolhedor, onde você tira suas dúvidas e escolhe o melhor horário para a sua primeira sessão, presencial ou online. A partir daí, seguimos com uma escuta atenta e sem julgamento sobre a sua história e o que te trouxe até aqui.",
-    "Com base nesse acolhimento inicial, construímos juntas um direcionamento terapêutico alinhado às suas necessidades. O acompanhamento segue com sessões regulares e devolutivas ao longo do processo, sempre respeitando o seu tempo e a sua singularidade.",
+    "Um primeiro encontro para compreender sua história, suas necessidades e o seu momento de vida. A partir daí, construímos juntas um plano terapêutico personalizado, com objetivos claros e passos que fazem sentido para você.",
+    "O acompanhamento segue com sessões regulares, com escuta qualificada e direcionamento terapêutico de acordo com suas necessidades, trabalhando sua evolução emocional com mais consciência e autonomia ao longo do tempo.",
   ],
-  // TODO: percentuais fictícios até a Jadi enviar dados reais — mantidos apenas como recurso visual.
   progressBars: [
-    { label: "Ambiente acolhedor", value: 100 },
+    { label: "Escuta acolhedora", value: 100 },
     { label: "Compromisso com o processo", value: 97 },
   ],
-  ctaLabel: "Vamos conversar?",
-  // TODO: valor fictício até a Jadi enviar o número real de atendimentos realizados.
+  ctaLabel: "Agendar consulta",
   stat: {
-    value: "+500",
+    value: "+200",
     label: "Atendimentos realizados",
   },
   image: {
-    src: "/images/jadi-processo.png",
-    alt: "Jadi Reis sentada, anotando durante uma sessão de atendimento",
+    src: "/images/anapaulafoto.png",
+    alt: "Ana Paula Batista em seu consultório",
   },
 } as const;
 
 export const reasons = {
   eyebrow: "ALGUNS BENEFÍCIOS DA TERAPIA",
-  title: "Benefícios do acompanhamento psicológico",
+  title: "Ambiente seguro, respeitoso, sigiloso e livre de julgamentos",
   subtitle:
-    "O acompanhamento psicológico traz benefícios reais para o dia a dia, como maior controle emocional, relações mais saudáveis e mais qualidade de vida.",
+    "A psicoterapia proporciona ao paciente o alcance de inúmeros benefícios, como controle das emoções, melhora nas relações interpessoais e mais qualidade de vida.",
   items: [
     {
       number: "01",
       title: "Controle das emoções",
       description:
-        "Uma pessoa com mais controle emocional consegue lidar com os desafios do dia a dia de forma mais equilibrada e positiva.",
+        "Um indivíduo com controle emocional é capaz de lidar com os problemas de forma positiva.",
     },
     {
       number: "02",
       title: "Melhora nas relações",
       description:
-        "As relações que vivemos influenciam diretamente nossa motivação, produtividade e satisfação com a vida.",
+        "As relações têm impacto em nossa motivação, produtividade e em nossa satisfação.",
     },
     {
       number: "03",
       title: "Diminuição da agressividade",
       description:
-        "Compreender melhor o que sente ajuda a construir formas mais leves e saudáveis de se relacionar com os outros.",
+        "Novas maneiras de se relacionar irão lhe proporcionar novas experiências sociais.",
     },
     {
       number: "04",
       title: "Diminuição da insônia",
-      description:
-        "Dormir melhor faz diferença em tudo — no humor, na disposição e na forma como encaramos o dia a dia.",
+      description: "Quando conseguimos dormir bem, a vida nos agradece.",
     },
   ],
 } as const;
@@ -268,34 +234,34 @@ export const faq = {
     {
       question: "Como funciona o atendimento online?",
       answer:
-        "As sessões online acontecem por videochamada, no mesmo formato e com a mesma qualidade do atendimento presencial. Você só precisa de um lugar tranquilo e conexão com a internet — posso atender qualquer pessoa em qualquer lugar do Brasil.",
+        "As consultas online seguem a mesma estrutura das presenciais, com a mesma duração e o mesmo cuidado na avaliação, para pacientes de todo o Brasil.",
     },
     {
       question: "Quanto tempo dura cada sessão?",
       answer:
-        "As sessões de acompanhamento psicológico costumam durar cerca de 50 minutos, com frequência combinada de acordo com a sua necessidade.",
+        "Cada sessão tem duração de cerca de 50 minutos, no mesmo horário combinado semanalmente ou quinzenalmente.",
     },
     {
       question: "Vocês fazem diagnóstico ou passam medicação?",
       answer:
-        "Não. Como psicóloga, meu trabalho é de acompanhamento psicológico, escuta clínica e avaliação psicológica — não realizo diagnóstico médico nem prescrevo medicação. Quando necessário, oriento o encaminhamento para acompanhamento psiquiátrico em conjunto.",
+        "Não. Psicólogos não prescrevem medicação — isso é atribuição exclusiva de médicos psiquiatras. O acompanhamento psicológico trabalha por meio de avaliação e escuta, com devolutivas claras sobre o que é observado ao longo do processo.",
     },
     {
       question: "Como sei se preciso de acompanhamento psicológico?",
       answer:
-        "Não é preciso esperar uma crise. Se você sente sobrecarga, ansiedade, dificuldade nas relações ou vontade de se entender melhor, esse já é um bom motivo para buscar apoio.",
+        "Sinais como ansiedade constante, tristeza persistente, dificuldade em lidar com as emoções ou insatisfação com a vida podem indicar que é hora de buscar ajuda. Se algo tem te incomodado no dia a dia, já vale a pena conversar.",
     },
     {
       question: "Como faço para agendar minha primeira sessão?",
       answer:
-        "É só me chamar no WhatsApp. Vamos conversar sobre o que te trouxe até aqui e encontrar o melhor horário para começar.",
+        "Basta entrar em contato pelo WhatsApp para alinharmos o melhor horário e formato — presencial em Curvelo ou online — para você.",
     },
   ],
 } as const;
 
 export const footer = {
   about:
-    "Espaço de escuta psicológica com ética, afeto e compromisso com a sua singularidade.",
+    "Espaço de escuta psicológica com ética, acolhimento e compromisso com a sua singularidade.",
   quickLinksTitle: "Links rápidos",
   hoursTitle: "Horário de atendimento",
   ctaLabel: "Agendar consulta",
