@@ -72,16 +72,15 @@ export default function Hero() {
           </Reveal>
 
           <Reveal direction="up" delay={100}>
-            <h1
-              className="max-w-2xl font-playfair text-[44px] font-normal leading-[1.2] tracking-wide text-ink"
-              style={{ fontVariant: "small-caps" }}
-            >
-              {hero.name}
+            <h1 className="max-w-2xl font-playfair text-[44px] font-normal uppercase leading-[1.2] tracking-wide text-ink">
+              Psicóloga Ana
+              <br />
+              Paula Batista
             </h1>
           </Reveal>
 
           <Reveal direction="up" delay={200}>
-            <p className="max-w-md font-heebo text-base font-normal leading-relaxed text-ink">
+            <p className="max-w-[26rem] font-heebo text-base font-normal leading-relaxed text-ink">
               {hero.subtitle}
             </p>
           </Reveal>

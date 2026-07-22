@@ -44,7 +44,7 @@ export const header = {
 } as const;
 
 export const hero = {
-  eyebrow: `${site.role} — CRP: 04/00000`,
+  eyebrow: "CRP: 04/00000",
   greeting: "",
   name: "Psicóloga Ana Paula Batista",
   subtitle:
